@@ -1,5 +1,5 @@
 {
-  "name": "shop2",
+  "name": "bug",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -29,6 +29,7 @@
     "@ionic/angular": "^7.0.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
+    "swiper": "^10.0.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

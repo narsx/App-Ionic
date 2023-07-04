@@ -21,7 +21,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+
+
  <!--  <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ main }}</ion-title>
@@ -32,14 +33,14 @@
     <strong class="capitalize">{{ main }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div> -->
-  <div id="container">
+  <div id="container" >
     <app-home *ngIf="main == 'home'"></app-home>
     <app-women *ngIf="main == 'woman'"></app-women>
     <app-men *ngIf="main == 'men'"></app-men>
     <app-account *ngIf="main == 'account'"></app-account>
   </div>
 
-</ion-content>
+
 
 <ion-tabs>
   <ion-tab-bar slot="bottom">

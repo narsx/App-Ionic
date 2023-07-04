@@ -8,11 +8,12 @@ register();
 })
 export class HomeComponent  implements OnInit {
   categories = [
-    {name:"category 1"},
-    {name:"category 2"},
-    {name:"category 3"},
-    {name:"category 4"},
-    {name:"category 5"},
+    {name:"Hombre",
+    img:"assets/images/hombre.jpg"},
+    {name:"Mujer",img:"assets/images/mujer.jpg"},
+    {name:"Bolsos",img:"assets/images/bolsos.jpg"},
+    {name:"Zapatos",img:"assets/images/zapatos.jpg"},
+    {name:"Complementos",img:"assets/images/complementos.jpg"},
   ];
   products = [
     {

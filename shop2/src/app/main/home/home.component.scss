@@ -8,6 +8,10 @@ swiper-container {
 ion-avatar {
   --border-radius: 4px;
 }
+ion-title {
+  padding-top: 1rem;
+}
+
 swiper-slide {
   display: flex;
   position: relative;

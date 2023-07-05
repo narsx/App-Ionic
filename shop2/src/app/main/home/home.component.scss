@@ -5,13 +5,28 @@ swiper-container {
   --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
   --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
 }
-ion-avatar {
-  --border-radius: 4px;
-}
-ion-title {
-  padding-top: 1rem;
-}
 
+ion-title {
+  padding-top: 1.5rem;
+}
+#avatar {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+
+}
+@media screen and (max-width: 480px) {
+  #avatar {
+    margin-top: 20px;
+    width: 75px;
+    height: 75px;
+  }
+}
+@media screen and (max-width: 400) {
+  ion-title {
+    font-size: 10px  !important;
+  }
+}
 swiper-slide {
   display: flex;
   position: relative;

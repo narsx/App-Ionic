@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriesService } from 'src/app/services/categories.service';
+import { ProductsService } from 'src/app/services/products.service';
 import { register } from 'swiper/element/bundle';
 register();
 @Component({
@@ -7,32 +9,17 @@ register();
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent  implements OnInit {
-  categories = [
-    {name:"Hombre",
-    img:"assets/images/hombre.jpg"},
-    {name:"Mujer",img:"assets/images/mujer.jpg"},
-    {name:"Bolsos",img:"assets/images/bolsos.jpg"},
-    {name:"Zapatos",img:"assets/images/zapatos.jpg"},
-    {name:"Complementos",img:"assets/images/complementos.jpg"},
-  ];
-  products = [
-    {
-      name: "product 1",
-    },
-    {
-      name: "product 2",
-    },
-    {
-      name: "product 3",
-    },
-    {
-      name: "product 4",
-    },
-    {
-      name: "product 5",
-    }]
-  constructor() { }
+ 
+  products:any = [];
+  categories:any = [];
+  constructor(
+    private _productsService:ProductsService,
+    private _categoriesService:CategoriesService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.products = this._productsService.getProducts();
+    this.categories = this._categoriesService.getCategories();
+  }
 
 }

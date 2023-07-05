@@ -12,6 +12,7 @@ export class HomeComponent  implements OnInit {
  
   products:any = [];
   categories:any = [];
+  
   constructor(
     private _productsService:ProductsService,
     private _categoriesService:CategoriesService

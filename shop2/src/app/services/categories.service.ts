@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Category, Subcategory } from '../interfaces/category';
+import { categories } from '../data/categories';
+import { Observable, of } from 'rxjs';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
@@ -6,17 +10,10 @@ import { Injectable } from '@angular/core';
 export class CategoriesService {
 
   constructor() {
-    console.log("Hola desde el servicio cateogrias")
    }
-  categories = [
-    {name:"Hombre",img:"assets/images/hombre.jpg"},
-    {name:"Mujer",img:"assets/images/mujer.jpg"},
-    {name:"Bolsos",img:"assets/images/bolsos.jpg"},
-    {name:"Zapatos",img:"assets/images/zapatos.jpg"},
-    {name:"Complementos",img:"assets/images/complementos.jpg"},
-  ];
+   categoriesData = categories
 
-  getCategories(){
-    return this.categories;
+  getCategories():Observable<Category[]>{
+    return of(this.categoriesData);
   }
 }

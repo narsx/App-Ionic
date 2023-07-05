@@ -1,30 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../interfaces/product';
+import { products } from '../data/product';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  products = [
-    {
-      name: "product 1",
-    },
-    {
-      name: "product 2",
-    },
-    {
-      name: "product 3",
-    },
-    {
-      name: "product 4",
-    },
-    {
-      name: "product 5",
-    }]
+ productsData = products
   constructor() {
-    console.log("Hola desde el servicio productos")
+   }
+   getProducts():Observable<Product[]>{
+    return of(this.productsData)
+   }
 
-   }
-   getProducts(){
-    return this.products
-   }
 }
+

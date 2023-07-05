@@ -4,9 +4,9 @@
       <img src="assets/images/header-bg.png">
     </div>
     <swiper-container slides-per-view="4">
-      <swiper-slide *ngFor="let category of categories">
+      <swiper-slide *ngFor="let category of categories | async">
         <ion-avatar>
-          <img id="avatar" src={{category.img}} />
+          <img id="avatar" src={{category.image}} />
         </ion-avatar>
         <ion-title  size="small">{{category.name}}</ion-title>
       </swiper-slide>
@@ -14,7 +14,7 @@
    <ion-title><i>Recomendados</i></ion-title>
       <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let product of products"><ion-card>
+        <ion-col *ngFor="let product of products | async"><ion-card>
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header>
             <ion-card-title>{{product.name}}</ion-card-title>

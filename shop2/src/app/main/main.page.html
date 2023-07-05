@@ -33,16 +33,14 @@
     <strong class="capitalize">{{ main }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div> -->
-  <div class="container" >
+  <ion-content [fullscreen]="true"  [scrollEvents]="true" class="container">
     <app-home *ngIf="main == 'home'"></app-home>
     <app-women *ngIf="main == 'woman'"></app-women>
     <app-men *ngIf="main == 'men'"></app-men>
     <app-account *ngIf="main == 'account'"></app-account>
-  </div>
-
-
-
-<ion-tabs>
+</ion-content>
+<ion-toolbar>
+  <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="rebuy">
       <ion-icon name="refresh-outline"></ion-icon>
@@ -56,9 +54,8 @@
       <ion-icon name="layers-outline"></ion-icon>
       Pedidos
     </ion-tab-button>
-   <!--  <ion-tab-button tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button> -->
+
   </ion-tab-bar>
 </ion-tabs>
+</ion-toolbar>
+
